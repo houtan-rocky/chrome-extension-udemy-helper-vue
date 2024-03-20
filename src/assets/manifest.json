@@ -1,0 +1,21 @@
+{
+	"name": "Udemy Helper",
+	"version": "1.0.0",
+	"description": "udemy find out course details",
+	"manifest_version": 3,
+	"author": "Hootan Rocky",
+	"action": {
+		"default_popup": "src/public/index.html",
+		"default_title": "Course details"
+	},
+	"content_scripts": [
+		{
+			"matches": ["https://*.udemy.com/course/*"],
+			"js": ["./src/js/content-scripts/server.js", "./src/js/content-scripts/app.js"],
+			"run_at": "document_end"
+		}
+	],
+	"icons": {
+		"128": "./src/assets/because.png"
+	}
+}
